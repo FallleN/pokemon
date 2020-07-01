@@ -1,0 +1,527 @@
+.barraQuiz{
+    /*display: none;*/
+    display: none;
+    width: 600px;
+    height: 630px;
+    background: rgb(65, 64, 64);
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 10px;
+    border-top-left-radius: none;
+    border-bottom-left-radius: none;
+    border-top-right-radius: none;
+    border-bottom-right-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 100px inset black;
+    z-index: 2;
+}
+
+
+#certo{
+    margin-left: 47%;
+    margin-top: 15%;
+    position: relative;
+    background: rgba(78, 77, 77, 0.712);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 40px 10px 10px 10px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10; 
+}
+
+#certo p{
+    color: yellow;
+    font: normal 18pt Arial;
+    animation: piscarAlerta 600ms infinite;
+}
+
+#certo img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-top: 15px;
+    border: none;
+}
+
+#okaycerto{
+    margin-top: 110px;
+    width: 100px;
+    height: 20px;
+    background: rgb(24, 24, 75);
+    color: yellow;
+    border: none;
+    border-radius: 10px;
+}
+
+
+#errado{
+    margin-left: 47%;
+    margin-top: 15%;
+    position: relative;
+    background: rgba(78, 77, 77, 0.712);
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    padding: 40px 10px 10px 10px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+}
+
+#errado p{
+    color: yellow;
+    font: normal 18pt Arial;
+    animation: piscarAlerta 600ms infinite;
+}
+
+@keyframes piscarAlerta{
+    from{
+        color: rgba(78, 77, 77, 0.712);
+    }to{
+        color: yellow;
+    }
+}
+
+
+#errado img{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    margin-top: 15px;
+    border: none;
+}
+#okayErrado{
+    margin-top: 110px;
+    width: 100px;
+    height: 20px;
+    background: rgb(24, 24, 75);
+    color: yellow;
+    border: none;
+    border-radius: 10px;
+}
+
+.Qbordas{
+    position: absolute;
+    display: none;
+    padding: 0;
+    width: 640px;
+    height: 640px;
+    margin-left: 30%;
+    z-index: 3;
+}
+
+@keyframes mostrarQborda{
+    from{
+        transform: scale(0.5);
+    }to{    
+        transform: scale(1);
+    }
+}
+
+@keyframes esconderBorda{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(0);
+    }
+}
+
+@keyframes voltarQborda{
+    fromt{
+        opacity: 1;
+        transform: translateX(0);
+    }to{
+        opacity: 0;
+        transform: translateX(-130%);
+    }
+}
+
+.QbarraCima{
+    position: absolute;
+    z-index: 3;
+}
+
+.QbarraCima img{
+    border: 0;
+    width: 620px;
+    height: 300px;
+}
+
+.QbarraBaixo{
+    position: absolute;
+    margin-top: 340px;
+    z-index: 2;
+}
+
+.QbarraBaixo img{
+    border: 0;
+    width: 620px;
+    height: 300px;
+}
+
+.Qball{
+    margin-top: 200px;
+    margin-left: 180px;
+    position: absolute;
+    z-index: 4;
+}
+.Qball img{
+    border: none;
+    border-radius: 100%;
+    background: black;
+}
+
+@keyframes Qcima{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-100%);
+
+    }
+}
+@keyframes Qbaixo{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(100%);
+    }
+}
+
+
+.f{
+    bottom: 0;
+}
+
+.capturados{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    padding: 1px;
+}
+
+.acertados{
+    width: 175px;
+    height: 300px;
+    display: block;
+    margin-left: 10px;
+    padding: 1px;
+    overflow: auto;
+
+}
+
+
+.pontuacao{
+    width: 130px;
+    height: 100px;
+    display: none;
+    background: rgb(65, 64, 64);
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 990px;
+    box-shadow: 0 0 100px inset black;
+    font: normal 15pt Arial;
+    color: yellow;
+    text-align: center;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+.pontuacao p:nth-child(2){
+    margin-top: 20px;
+}
+
+@keyframes mostrarPontuacao{
+    from{
+        opacity: 0;
+        transform: translateX(-100%);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes esconderPontuacao{
+    from{
+        opacity: 1;
+        transform: translateX(0);
+    }to{
+        opacity: 0;
+        transform: translateX(-100%)
+    }
+}
+
+.sp{
+    width: 200px;
+    display: none;
+    background: rgb(65, 64, 64);
+    height:630px;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 200px;
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+    border-top-left-radius:10px;
+    border-bottom-left-radius: 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 100px inset black;
+    z-index: 2; 
+}
+
+.vidas{
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+@keyframes vidas{
+    0%{
+        opacity: 0;
+        transform:  translateY(-20%) translateX(-150%) rotate(90deg);
+    }50%{
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }70%{
+        transform:  translateX(-15%) rotate(5deg);  
+    }80%{
+        transform: translateX(0) rotate(0);
+    }90%{
+        transform:  translateX(-15%) rotate(5deg);  
+    }100%{
+        transform: rotate(0);
+    }
+}
+@keyframes sumirVidas{
+    0%{
+        transform:  translateY(0) translateX() rotate();
+    }100%{
+        transform:  translateY(-120%) translateX(-180%) rotate(-360deg);
+    }
+}
+
+
+.sp p{
+    font: normal 15pt Arial;
+    color: yellow;
+    text-align: center;
+}
+
+#pikachu{
+    border: 1px solid black;
+    width: 200px;
+    height: 136px;
+    position: relative;
+}
+
+.respostas{
+    border-radius: 10em;
+    border: 1px solid black;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    font: normal 20pt Arial;
+}
+
+.respostas:hover{
+    box-shadow: 0 2px 10px inset white;
+}
+
+
+/*bolas poke*/
+
+/*
+
+.vidro{
+    position: absolute;
+    border: none;
+    display: none;
+    top: 90px;
+    left: 740px;
+    width: 600px;
+    height: 550px;
+    border-radius: 100%;
+    z-index: 1; 
+}
+*/
+
+@keyframes movervidro{
+    from{
+        opacity: 0;
+        transform: translateY(-200%);
+    }30%{
+        opacity: 0;
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes escondervidro{
+    from{
+        opacity: 1;
+        transform: translateY(0);
+    }to{
+        opacity: 0;
+        transform: translateY(-200%);
+    }
+}
+
+
+
+.vidro{
+    position: absolute;
+    border: none;
+    width: 600px;
+    height: 550px;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.meuvidro{
+    position: absolute;
+    top: 90px;
+    display: none;
+    border: none;
+    height: 550px;
+    padding: 0;
+    width: 600px;
+    left: 740px;
+    z-index: 1;
+}
+
+.miniball{
+    border: none;
+    position: absolute;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    opacity: 0.9;
+    /*margin-left: 265px;*/
+    /*margin-left: 355px;*/
+    animation: up infinite;
+    animation-direction: alternate;
+    z-index: 2;
+}
+
+@keyframes up{
+    from{
+      transform: translateY(0);
+    }to{
+      transform: translateY(520px) rotate(960deg);
+    }
+  }
+  
+
+
+
+
+
+/*Galeria*/
+
+ /*galeria*/
+    /* Slideshow container */
+    .Qgallery-container {
+        width: 20px;
+        position: relative;
+        margin: 0 5%;
+        background: #333;
+        padding: 2px;
+      }
+        @media (min-width: 480px) {
+            .Qgallery-container {
+              width: 250px;
+              margin: auto;
+            }
+        }
+      
+      /* Hide the images by default */
+      .QmySlides {
+        display: none;
+      }
+      
+      /* Next & previous buttons */
+      .Qprev, .Qnext {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        background-color: rgba(0,0,0,0.1);
+      }
+      
+      /* Position the "next button" to the right */
+      .Qnext {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .Qprev:hover, .Qnext:hover {
+          background-color: rgb(81, 81, 167);
+          box-shadow: 0 2px 180px inset black;
+      }
+      
+      /* Caption text */
+      .Qtext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: center;
+        width: 227px;
+        background: black;
+      }
+      
+      .Qimgslide {
+        width: 100%;
+      
+      }
+      
+      .Qimgslide:hover{
+          background-color: rgb(81, 81, 167);
+          box-shadow: 0 2px 180px inset black;
+      }
+      
+      /* Number text (1/3 etc) */
+      .Qnumbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      @media (max-width: 768px) {
+        .Qnumbertext {
+          top: 15px;
+        }
+      }
+      
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+

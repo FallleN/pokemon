@@ -1,0 +1,415 @@
+.barraCima2{
+    position: absolute;
+    margin-top: -530px;
+    z-index: 1;
+    animation: cimaVolta 2s forwards;
+
+}
+
+.voltar{
+    width: 40px;
+    height: 40px;
+    margin-left: 580px;
+    margin-top: -100px;
+    border-radius: 100%;
+}
+
+.barraBaixo2{
+    position: absolute;
+    margin-top: 870px;
+    z-index: 1;
+    animation: baixoVolta 2s forwards;
+}
+
+@keyframes sumirbola {
+    from{   
+        transform: scale(1);
+    }to{
+        transform: scale(0) rotate(720deg);
+    }
+}
+@keyframes cima{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-100%);
+
+    }
+}
+@keyframes baixo{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(100%);
+    }
+}
+
+@keyframes baixoVolta{
+    from{
+        transform: translateY(97%);
+    }to{
+        transform: translateY(-1%);
+    }
+}
+@keyframes cimaVolta{
+    from{
+        transform: translateY(-97%);
+    }to{
+        transform: translateY(1%);
+      
+    }
+}
+
+/*  PokeDex*/
+
+.todo{
+    width: 600px;
+    height: 580px;
+    background-color: rgb(196, 36, 36);
+    position: absolute;
+    border: 1px solid black;
+    display: none;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 1px black;
+    z-index: 2px;
+    box-shadow: 0 2px 190px inset black;
+}
+.barra{
+    width: 600px;
+    height: 640px;
+    background: rgb(65, 64, 64);
+    position: absolute;
+    margin-left: 670px;
+    display: none;
+        
+}
+#pokedex{
+    background-color: rgba(201, 194, 194, 0.897);
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px black;
+}
+img{
+    border: 1px solid black;
+}
+.inp{
+    text-align: center;
+
+}
+.inp input{
+    border-radius: 10em;
+    
+}
+.inp button{
+    border-radius: 10em;
+}
+
+.cobertura{
+   border: 1px solid green;
+   width: 480px;
+   height: 1560px;
+}
+.pokemonNames{
+    margin-top: -2.5px;
+    font: normal 8.5pt Arial;
+    padding: 1px;
+}
+
+.pokein img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: black;
+    margin: 0;
+}
+img:hover:not(#baixo):not(#cima):not(#Qcima):not(#Qbaixo):not(.vidro){
+    background-color: rgb(81, 81, 167);
+    box-shadow: 0 2px 30px inset black;
+}
+.pokeinmove img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: black;
+    margin: 0;
+}  
+.pokein{
+    position: absolute;
+    bottom: 80px;
+    animation: pokegira 2s infinite;
+}
+.pokeVolume{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: black;
+    animation: pokegira 2s infinite;
+    z-index: 6;
+}
+
+.pokeinmove{
+    position: absolute;
+    bottom: 80px;
+    animation: move 4s ; 
+}
+.pokenome{
+    border: 1px solid black;
+    width: 300px;
+    margin: auto;
+    margin-top: 70px;
+    height: 100px;
+    display: block;
+    animation: pokedex 2s infinite;
+}
+.pokenome p {
+    text-align: center;
+    padding: 20px;
+    font: normal 40pt Arial;
+    color: yellow;
+}
+.status{
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    background: white;
+    border: 1px solid black;
+    margin-top: 20px;
+    
+}
+#close{
+    width: 50px;
+    height: 50px;
+    margin-left: 540px;
+    margin-top: 5px;
+    border-radius: 100%;
+    
+}
+table { 
+    width:400px;
+    margin:0 auto;
+    margin-top: 10px;
+    margin-left: -400px;
+    border-spacing:0;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    overflow: visible;
+    }
+caption {
+    font-size:130%;
+    font-weight:bold;
+    padding:5px 0;
+    
+    border:1px solid #333;
+    border-bottom:none; 
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #333;  
+    color: white;  
+    box-shadow: 0 0 10px 1px black;
+}
+tr, td, th {
+    border:thin solid #ccc;
+    border-bottom:none;
+    border-right:none;
+    padding:5px;
+    box-shadow: 0 0 10px 1px black;
+    overflow: visible;
+}
+td { 
+    text-align:center;
+    color: white;
+    overflow: visible;
+}
+tbody tr:nth-child(odd){
+    background-color: black;
+    overflow: visible;
+}
+tbody tr:nth-child(even){
+    background-color:#333;
+    overflow: visible;
+}
+
+.cap{
+    animation: movecap 1s linear forwards;
+}
+
+.vida{
+    animation: movevida 1.2s linear forwards;
+}
+
+.defesa{
+    animation: movedefesa 1.4s linear forwards;
+}
+.defesaS{
+    animation: movedefesaS 1.6s linear forwards;
+}
+
+.ataque{
+    animation: moveataque 1.7s linear forwards;
+}
+
+.ataqueS{
+    animation: moveataqueS 1.8s linear forwards;
+}
+
+.velocidade{
+    animation: movevelocidade 1.9s linear forwards;
+}
+
+#coracao img, #forca img, #forcaS img, #shield img, #shieldS img, #speed img{
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin-left: 10px
+}
+
+@keyframes desaparecerBarra{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(0);
+    }
+}
+
+@keyframes aparecerBarra{
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1);
+    }
+}
+
+@keyframes voltarBall{
+    from{
+        transform: scale(0);
+    }to{
+        transform: scale(1) rotate(-720deg);
+    }
+}
+@keyframes movevelocidade{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveataqueS{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveataque{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes movedefesaS{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes movedefesa{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes movevida{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes movecap{
+    to{
+        opacity: 1;
+        transform: translateX(500px);
+    }from{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes voltam{
+    0%{
+        opacity: 1;
+        transform: translateX(0);
+    }20%,100%{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes m{
+    0%,50%{
+        opacity: 0;
+    }100%{
+        opacity: 1;
+        transform: translateX(670px);
+    }
+}
+@keyframes pokegira{
+    from{
+       transform: rotate(0);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move{
+    from{
+        transform: translateX(0);
+    }50%{
+        transform: translateX(500px) rotate(360deg);
+    }to{
+        transform: translateX(0) rotate(-360deg);
+    }
+}
+@keyframes pokedex{
+    from{
+        opacity: 0;
+    }70%{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}

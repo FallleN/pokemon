@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pokemon</title>
+
+    <link rel="stylesheet" href="css/inicio.css" type="text/css">
+    <link rel="stylesheet" href="css/pokedex.css" type="text/css">
+    <link rel="stylesheet" href="css/quiz.css">
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!--<iframe src="som/Song.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>-->
+    
+    <a id="pause"><i id="icone" class="fa-volume-mute"></i></a>
+		<audio autoplay="autoplay" loop id="musica">     
+			<source src="som/Song.ogg"/>       
+            <source src="som/Song.mp3"/>   
+        </audio> 
+        
+           <img class="pokeVolume"src="imagens/pokebola-verde.png" onclick="t2()">
+           <div class="meuvidro">
+                <img class="vidro" src="imagens/vidro.png">
+           </div>
+
+         <!--    <img class="vidro" src="imagens/vidro.png">-->
+        
+    <img class="im" src="https://media.giphy.com/media/ZQEjEDKKskde8/giphy.gif">
+    <div id="fundo">
+        <div id="esquerda"></div>
+        <div id="direita"></div>
+    </div>
+
+        <section class="iniciar">
+            <div id="textopoke"><p>Pokemon</p></div>
+            <div id="quiz"><p>Quiz</p></div>
+            <div id="divpokedex"><p>PokeDex</p></div>
+        </section>
+
+             <!--Pokedex -->
+
+        <div  class="todo">
+                <img class="voltar" src="imagens/voltar.png">
+                <div class="inp">
+                <input type="text" placeholder="pesquisa" id="pesquisar"> <button value="pesquisa" onclick="pesquisar()">Pesquisar</button></div>
+               <section id="pokedex">
+                    <div id="cobertura"></div>
+               </section>
+               <div class="pokeinmove" id="poke" onclick="t()"><img src="imagens/pokebola-verde.png" alt="">
+              </div>
+              <div class="pokenome">
+                  <p>PokeDex</p>
+              </div>
+        </div>
+        <div class="bordas">
+            <div class="barraCima"><img id="cima" src="imagens/p.png"></div>
+            <div class="ball"><img id="balls" src="imagens/pokebola.png"></div>
+            <div class="barraBaixo"><img id="baixo" src="imagens/pb.png"></div>
+        </div>
+        <div class="barra" id="barra">
+            
+                <img src="imagens/close.png" id="close">
+                <section class="gallery-container">
+    
+                        <!--Slide-->
+                        <div class="mySlides"> <!-- 01 -->
+                            <div class="numbertext">01 / 04</div>
+                            <img class="imgslide" src=""/>
+                            <div class="text"></div>
+                        </div>
+            
+                        <div class="mySlides fade"> <!-- 02 -->
+                            <div class="numbertext">02 / 04</div>
+                            <img class="imgslide" src=""/>
+                            <div class="text"></div>
+                        </div>
+            
+                        <div class="mySlides fade"> <!-- 03 -->
+                            <div class="numbertext">03 / 04</div>
+                            <img class="imgslide" src=""/>
+                            <div class="text"></div>
+                        </div>
+            
+                        <div class="mySlides fade"> <!-- 04 -->
+                            <div class="numbertext">04 / 04</div>
+                            <img class="imgslide" src=""/>
+                            <div class="text"></div>
+                        </div>
+                        <!--Final Slides-->
+            
+                        <!--Navigation-->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </section>
+                    <table>
+                        <caption>Habilidades</caption>
+                        <tbody id="tbody">
+                            <tr>
+                                <td id="coracao">Vida<img src="imagens/coracao.png"></td>
+                                <td id="vida">0</td>
+                            </tr>
+                            <tr>
+                                <td id="shield">Defesa<img src="imagens/escudo.png"></td>
+                                <td id="defesa">0</td>
+                            </tr>
+                            <tr>
+                               <td id="shieldS">Defesa Especial <img src="imagens/escudoS.png"></td>
+                               <td id="defesaS">0</td>
+                            </tr>
+                            <tr>
+                                <td id="forca">Ataque<img src="imagens/forca.png"></td>
+                                <td id="ataque">0</td>
+                            </tr>
+                            <tr>
+                                <td id="forcaS">Ataque Especial<img src="imagens/forcaS.png"></td>
+                                <td id="ataqueS">0</td>
+                            </tr>
+                            <tr>
+                                <td id="speed">Velocidade<img src="imagens/velocidade.png"></td>
+                                <td id="velocidade">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+        </div>
+
+    <!--Quiz-->
+    <div class="Qbordas">
+            <div class="QbarraCima"><img id="Qcima" src="imagens/p.png"></div>
+            <div class="Qball"><img id="Qballs" src="imagens/pokebola.png"></div>
+            <div class="QbarraBaixo"><img id="Qbaixo" src="imagens/pb.png"></div>
+    </div>
+    <span class="sp">
+        <img class="vidas" src="imagens/vida.png">
+        <img class="vidas" src="imagens/vida.png">
+        <img class="vidas" src="imagens/vida.png">
+        <img class="vidas" src="imagens/vida.png">
+        <img class="vidas" src="imagens/vida.png">
+        <img class="vidas" src="imagens/vida.png">
+        <img id="pikachu" src="https://media3.giphy.com/media/rGFFiIrVSqx9u/giphy.gif">
+        <p>Obtidos</p>
+        <section class="acertados">
+
+        </section>
+    </span>
+    <span class="pontuacao">
+        <p>pontuação</p>
+        <p>0</p>
+    </span>
+    <div class="barraQuiz" id="barraQuiz">
+            <img src="imagens/close.png" id="close">
+            <section class="Qgallery-container">
+
+                    <!--Slide-->
+                    <div class="QmySlides"> <!-- 01 -->
+                        <div class="Qnumbertext">01 / 04</div>
+                        <img class="Qimgslide" src=""/>
+                        <div class="Qtext"></div>
+                    </div>
+        
+                    <div class="QmySlides fade"> <!-- 02 -->
+                        <div class="Qnumbertext">02 / 04</div>
+                        <img class="Qimgslide" src=""/>
+                        <div class="Qtext"></div>
+                    </div>
+        
+                    <div class="QmySlides fade"> <!-- 03 -->
+                        <div class="Qnumbertext">03 / 04</div>
+                        <img class="Qimgslide" src=""/>
+                        <div class="Qtext"></div>
+                    </div>
+        
+                    <div class="QmySlides fade"> <!-- 04 -->
+                        <div class="Qnumbertext">04 / 04</div>
+                        <img class="Qimgslide" src=""/>
+                        <div class="Qtext"></div>
+                    </div>
+                    <!--Final Slides-->
+        
+                    <!--Navigation-->
+                    <a class="Qprev" onclick="QplusSlides(-1)">&#10094;</a>
+                    <a class="Qnext" onclick="QplusSlides(1)">&#10095;</a>
+                </section>
+        </div>
+        <div id="errado">
+            <p>Resposta Errada</p>
+            <img src="imagens/errado.png">
+        
+        </div>
+        <div id="certo">
+            <p>Resposta Certa</p>
+            <img src="imagens/correto.png">
+           
+        </div>
+        <div id="gameover">
+            <p>Game Over</p>
+            <p>continuar?</p>
+            <img class="triste" src="https://media3.giphy.com/media/12BQY6Nj4ZDAFG/giphy.gif">
+            <div class="escolhaNo">
+                <p>No</p>
+            </div>
+            <div class="escolhaYes">
+                    <p>Yes</p>
+            </div>
+            <p class="oscore1">Score</p>
+            <p class="oscore2">0</p>
+        </div>
+
+        <div id="vitoria">
+            <p>Vitoria</p>
+            <p>Continuar?</p>
+            <img class="feliz" src="https://i.gifer.com/4OKm.gif">
+            <div class="No">
+                    <p>No</p>
+                </div>
+                <div class="Yes">
+                        <p>Yes</p>
+                </div>
+                <p class="score1">Score</p>
+                <p class="score2">0</p>
+        </div>
+
+        <script src="js/divs.js"></script>
+        <script src="js/pokedex.js"></script>
+        <script src="js/visualControls.js"></script>        
+</body>
+</html>
